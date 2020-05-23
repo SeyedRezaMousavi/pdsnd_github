@@ -6,7 +6,7 @@ May 23, 2020
 
 **Description**
 
-In this project, I used data provided by Motivate, a bike share system provider for major cities in the United States, to uncover bike share usage patterns. I compared the system usage between three large cities: Chicago, New York City, and Washington, DC.
+In this project, I used the data provided by Motivate, a bike share system provider for major cities in the United States, to uncover bike share usage patterns. I wrote a code in R to read and visualize the data and to compare the system usage between three large cities: Chicago, New York City, and Washington, DC.
 
 **Files used**
 1. chicago.csv
