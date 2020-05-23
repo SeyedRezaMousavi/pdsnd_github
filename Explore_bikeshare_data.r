@@ -22,7 +22,7 @@ if (city == 'Washington') {
 } else if (city == 'New York') {
     date = ny$Start.Time    
 } else {
-    stop('The city you typed is an invalid choice!!!')
+    stop('The city you typed is an invalid choice!!! Please try again.')
 }
 
 month = month(date, label=TRUE)
@@ -56,7 +56,7 @@ if (city == 'Washington') {
 } else if (city == 'New York') {
     UT = ny$User.Type    
 } else {
-    stop('The city you typed is an invalid choice!!!')
+    stop('The city you typed is an invalid choice!!! Please try again.')
 }
 
 UT[UT==""] <- NA
@@ -83,7 +83,7 @@ print(paste('The total travel time for users in Chicago is:', round(sum(TD_chi))
 
 names = c('Washington', 'New York', 'Chicago')
 sums = c(sum(TD_wash), sum(TD_ny), sum(TD_chi))
-barplot(height=sums, names=names, col='blue', main="Total Travel Time for the Cities", ylab="Total Travel Time")
+barplot(height=sums, names=names, col='green', main="Total Travel Time for the Cities", ylab="Total Travel Time")
 
 
 print(paste('The average travel time for users in Washington is:', round(mean(TD_wash))))
@@ -92,7 +92,7 @@ print(paste('The average travel time for users in Chicago is:', round(mean(TD_ch
 
 names = c('Washington', 'New York', 'Chicago')
 sums = c(mean(TD_wash), mean(TD_ny), mean(TD_chi))
-barplot(height=sums, names=names, col='red', main="Average Travel Time for the Cities", ylab="Average Travel Time")
+barplot(height=sums, names=names, col='blue', main="Average Travel Time for the Cities", ylab="Average Travel Time")
 
 ny[ny==""]<-NA
 qplot(x=User.Type, y=Trip.Duration, data=subset(ny, !is.na(User.Type)), geom='boxplot')+ ggtitle('Box Plot of Trip Durations for New York')
