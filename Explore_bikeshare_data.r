@@ -22,7 +22,7 @@ if (city == 'Washington') {
 } else if (city == 'New York') {
     date = ny$Start.Time    
 } else {
-    stop('The city you typed is an invalid choice!!!')
+    stop('The city you typed is an invalid choice!!! Please try again.')
 }
 
 month = month(date, label=TRUE)
@@ -56,7 +56,7 @@ if (city == 'Washington') {
 } else if (city == 'New York') {
     UT = ny$User.Type    
 } else {
-    stop('The city you typed is an invalid choice!!!')
+    stop('The city you typed is an invalid choice!!! Please try again.')
 }
 
 UT[UT==""] <- NA
